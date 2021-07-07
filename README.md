@@ -51,6 +51,21 @@ function MyApp({ Component, pageProps }) {
 export default MyApp
 ```
 
+## Track events
+
+You can track custom events with this API by doing the following:
+
+```js
+import { ga } from "@blackbox-vision/next-google-analytics";
+
+ga.event({
+  action: "my_event",
+  params: {
+    my_param: "xyz",
+  },
+});
+```
+
 ## Compatibility
 
 We're supporting next.js v11 only for now, but we've a `GoogleAnalyticsLegacy` component in the works and intentions to support older versions of next.

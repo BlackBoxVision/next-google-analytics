@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
-import * as GoogleAnalytics from "../apis/ga";
+import { ga as GoogleAnalytics } from "../apis/ga";
 
 export const useGoogleAnalytics = (id: string) => {
   const router = useRouter();
