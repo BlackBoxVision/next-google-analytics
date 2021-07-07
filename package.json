@@ -34,7 +34,7 @@
   },
   "peerDependencies": {
     "react": "^16.11.0",
-    "next": "^10.0.0"
+    "next": "^11.0.0"
   },
   "@pika/pack": {
     "pipeline": [

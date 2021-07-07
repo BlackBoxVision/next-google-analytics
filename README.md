@@ -50,3 +50,7 @@ function MyApp({ Component, pageProps }) {
 
 export default MyApp
 ```
+
+## Compatibility
+
+We're supporting next.js v11 only for now, but we've a `GoogleAnalyticsLegacy` component in the works and intentions to support older versions of next.
