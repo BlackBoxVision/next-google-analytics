@@ -10,7 +10,7 @@ export const useGoogleAnalytics = (id: string) => {
     const handleRouteChange = (url: string) => {
       if (!id) {
         console.warn(
-          `[GoogleAnalyticsApi]: ID is missing, please, provide a valid Google Analytics ID`
+          `[useGoogleAnalytics]: ID is missing, please, provide a valid Google Analytics ID`
         );
         return;
       }
