@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 import * as GoogleAnalytics from "../apis/ga";
 
-export const useTrackPageviews = (id: string) => {
+export const useGoogleAnalytics = (id: string) => {
   const router = useRouter();
 
   useEffect(() => {
