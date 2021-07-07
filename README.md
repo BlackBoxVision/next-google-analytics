@@ -1,4 +1,4 @@
-# Next Google Analytics
+# Next Google Analytics [![npm version](https://badge.fury.io/js/%40blackbox-vision%2Fnext-google-analytics.svg)](https://badge.fury.io/js/%40blackbox-vision%2Fnext-google-analytics) [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
 :rocket: Integrate Google Analytics in next.js with ease
 
