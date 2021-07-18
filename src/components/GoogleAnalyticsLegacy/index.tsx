@@ -1,16 +1,11 @@
 import React from "react";
 import Head from "next/head";
 
+import { GoogleAnalyticsComponent } from "../../types";
+
 import { useGoogleAnalytics } from "../../hooks/useGoogleAnalytics";
 
-type GoogleAnalyticsLegacyComponent = React.FC<GoogleAnalyticsLegacyProps>;
-type GoogleAnalyticsLegacyProps = {
-  id: string;
-};
-
-export const GoogleAnalyticsLegacy: GoogleAnalyticsLegacyComponent = ({
-  id,
-}) => {
+export const GoogleAnalyticsLegacy: GoogleAnalyticsComponent = ({ id }) => {
   useGoogleAnalytics(id);
 
   if (!id) {

@@ -1,9 +1,11 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
-import { ga as GoogleAnalytics } from "../apis/ga";
+import { UseGoogleAnalyticsHook } from "../types";
 
-export const useGoogleAnalytics = (id: string) => {
+import { googleAnalytics } from "../apis/ga";
+
+export const useGoogleAnalytics: UseGoogleAnalyticsHook = (id) => {
   const router = useRouter();
 
   useEffect(() => {
@@ -15,7 +17,7 @@ export const useGoogleAnalytics = (id: string) => {
         return;
       }
 
-      GoogleAnalytics.pageview(id, url);
+      googleAnalytics.pageview(id, url);
     };
 
     router.events.on("routeChangeComplete", handleRouteChange);

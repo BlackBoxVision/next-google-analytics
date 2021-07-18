@@ -30,22 +30,16 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS=your_tracking_id
 
 3. Create a custom `app` and add the following contents:
 
-```diff
-// _app.tsx|js
-+ import { GoogleAnalytics, useGoogleAnalytics } from '@blackbox-vision/next-google-analytics';
-
-+  const id = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
+```js
++ import { GoogleAnalytics } from '@blackbox-vision/next-google-analytics';
 
 function MyApp({ Component, pageProps }) {
-+  useGoogleAnalytics(id);
-
--  return <Component {...pageProps} />
-+  return (
-+    <>
-+      <GoogleAnalytics id={id} />
-+      <Component {...pageProps} />
-+    </>
-+  );
+  return (
+    <>
+      <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 export default MyApp
@@ -56,13 +50,10 @@ export default MyApp
 You can track custom events with this API by doing the following:
 
 ```js
-import { ga } from "@blackbox-vision/next-google-analytics";
+import { googleAnalytics } from "@blackbox-vision/next-google-analytics";
 
-ga.event({
-  action: "my_event",
-  params: {
-    my_param: "xyz",
-  },
+googleAnalytics.event("my_event", {
+  my_param: "xyz",
 });
 ```
 

@@ -1,12 +1,9 @@
 import React from "react";
 import Script from "next/script";
 
-import { useGoogleAnalytics } from "../../hooks/useGoogleAnalytics";
+import { GoogleAnalyticsComponent } from "../../types";
 
-type GoogleAnalyticsComponent = React.FC<GoogleAnalyticsProps>;
-type GoogleAnalyticsProps = {
-  id: string;
-};
+import { useGoogleAnalytics } from "../../hooks/useGoogleAnalytics";
 
 export const GoogleAnalytics: GoogleAnalyticsComponent = ({ id }) => {
   useGoogleAnalytics(id);
