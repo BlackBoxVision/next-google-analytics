@@ -1,12 +1,16 @@
 import React from "react";
 import Script from "next/script";
 
+import { useGoogleAnalytics } from "../../hooks/useGoogleAnalytics";
+
 type GoogleAnalyticsComponent = React.FC<GoogleAnalyticsProps>;
 type GoogleAnalyticsProps = {
   id: string;
 };
 
 export const GoogleAnalytics: GoogleAnalyticsComponent = ({ id }) => {
+  useGoogleAnalytics(id);
+
   if (!id) {
     console.warn(
       `[GoogleAnalytics]: ID is missing, please, provide a valid Google Analytics ID`

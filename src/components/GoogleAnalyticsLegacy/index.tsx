@@ -1,6 +1,8 @@
 import React from "react";
 import Head from "next/head";
 
+import { useGoogleAnalytics } from "../../hooks/useGoogleAnalytics";
+
 type GoogleAnalyticsLegacyComponent = React.FC<GoogleAnalyticsLegacyProps>;
 type GoogleAnalyticsLegacyProps = {
   id: string;
@@ -9,6 +11,8 @@ type GoogleAnalyticsLegacyProps = {
 export const GoogleAnalyticsLegacy: GoogleAnalyticsLegacyComponent = ({
   id,
 }) => {
+  useGoogleAnalytics(id);
+
   if (!id) {
     console.warn(
       `[GoogleAnalyticsLegacy]: ID is missing, please, provide a valid Google Analytics ID`
