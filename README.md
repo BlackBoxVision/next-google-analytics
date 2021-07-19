@@ -31,7 +31,7 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS=your_tracking_id
 3. Create a custom `app` and add the following contents:
 
 ```js
-+ import { GoogleAnalytics } from '@blackbox-vision/next-google-analytics';
+import { GoogleAnalytics } from '@blackbox-vision/next-google-analytics';
 
 function MyApp({ Component, pageProps }) {
   return (
