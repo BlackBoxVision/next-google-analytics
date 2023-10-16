@@ -1,9 +1,9 @@
-import React from "react";
-import Script from "next/script";
+import React from 'react';
+import Script from 'next/script';
 
-import { GoogleAnalyticsComponent } from "../../types";
+import { GoogleAnalyticsComponent } from '../../types';
 
-import { useGoogleAnalytics } from "../../hooks/useGoogleAnalytics";
+import { useGoogleAnalytics } from '../../hooks/useGoogleAnalytics';
 
 export const GoogleAnalytics: GoogleAnalyticsComponent = ({ id }) => {
   useGoogleAnalytics(id);
@@ -18,11 +18,11 @@ export const GoogleAnalytics: GoogleAnalyticsComponent = ({ id }) => {
   return (
     <>
       <Script
-        strategy={"afterInteractive"}
+        strategy={'afterInteractive'}
         src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
       />
       <Script
-        strategy={"afterInteractive"}
+        strategy={'afterInteractive'}
         dangerouslySetInnerHTML={{
           __html: `
           window.dataLayer = window.dataLayer || [];
@@ -39,4 +39,4 @@ export const GoogleAnalytics: GoogleAnalyticsComponent = ({ id }) => {
   );
 };
 
-GoogleAnalytics.displayName = "GoogleAnalytics";
+GoogleAnalytics.displayName = 'GoogleAnalytics';

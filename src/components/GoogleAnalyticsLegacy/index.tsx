@@ -1,9 +1,9 @@
-import React from "react";
-import Head from "next/head";
+import React from 'react';
+import Head from 'next/head';
 
-import { GoogleAnalyticsComponent } from "../../types";
+import { GoogleAnalyticsComponent } from '../../types';
 
-import { useGoogleAnalytics } from "../../hooks/useGoogleAnalytics";
+import { useGoogleAnalytics } from '../../hooks/useGoogleAnalytics';
 
 export const GoogleAnalyticsLegacy: GoogleAnalyticsComponent = ({ id }) => {
   useGoogleAnalytics(id);
@@ -35,4 +35,4 @@ export const GoogleAnalyticsLegacy: GoogleAnalyticsComponent = ({ id }) => {
   );
 };
 
-GoogleAnalyticsLegacy.displayName = "GoogleAnalyticsLegacy";
+GoogleAnalyticsLegacy.displayName = 'GoogleAnalyticsLegacy';
